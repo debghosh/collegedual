@@ -1,0 +1,20 @@
+%div
+  Start Colleges Dual Game
+
+  %div
+    #form_div.float-left.inline-block.half-width
+      = form_tag('/questions/show_question') do
+        .form-group
+          %label.col-sm-2.control-label{:for => "inputEmail3"}
+            Choose the First College
+          .col-sm-10
+            = select_tag "first_college", options_from_collection_for_select(@colleges, "id", "college_name")
+
+          %label.col-sm-2.control-label{:for => "inputEmail3"}
+            Choose the Second College
+          .col-sm-10
+            = select_tag "second_college", options_from_collection_for_select(@colleges, "id", "college_name")
+
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            %button.btn.btn-default{:type => "submit"} Submit

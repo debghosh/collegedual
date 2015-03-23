@@ -1,0 +1,5 @@
+- @questions.each do |qn|
+  Question
+  = qn.question_name
+  Answer Options
+= will_paginate @questions, :params => { first_college: @first_college , second_college: @second_college}

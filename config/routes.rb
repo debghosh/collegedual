@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  root 'colleges#index'
+  resources :colleges
+  resources :questions do
+    collection do
+      match :show_question, via: [:get, :post]
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

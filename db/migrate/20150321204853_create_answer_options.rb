@@ -3,7 +3,7 @@ class CreateAnswerOptions < ActiveRecord::Migration
     create_table :answer_options do |t|
       t.integer :question_id
       t.string  :option
-      t.boolean :is_correct
+      t.boolean :is_correct, default: false
       t.timestamps
     end
   end
