@@ -34,4 +34,21 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.fb_appid = '1438978313030692'
+  config.fb_app_secret = '6647a11d7b5f6a9b18d94b81470f2515'
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "justanotherdummyemail@gmail.com",
+      :password             => "justanotherdummyemail!",
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+  }
 end
