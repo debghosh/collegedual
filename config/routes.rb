@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount API => "/api", :at => '/'
+
   root 'colleges#index'
   resources :colleges
   resources :questions do
