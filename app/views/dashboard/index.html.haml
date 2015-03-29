@@ -1,0 +1,201 @@
+%section#feature_slider
+  /
+    Each slide is composed by <img> and .info
+    \- .info's position is customized with css in index.css
+    \- each <img> parallax effect is declared by the following params inside its class:
+
+    example: class="asset left-472 sp600 t120 z3"
+    left-472 means left: -472px from the center
+    sp600 is speed transition
+    t120 is top to 120px
+    z3 is z-index to 3
+    Note: Maintain this order of params
+
+    For the backgrounds, you can combine from the bgs folder :D
+  %article#showcasing.slide{:style => "background: url('/assets/backgrounds/landscape.png') repeat-x top center;"}
+    %img.asset.left-30.sp600.t120.z1{:src => "/assets/slides/scene1/macbook.png"}/
+    .info
+      %h2 Beautiful theme for showcasing your works.
+  %article#ideas.slide{:style => "background: url('/assets/backgrounds/aqua.jpg') repeat-x top center;"}
+    .info
+      %h2 We love to turn ideas into beautiful things.
+    %img.asset.left-480.sp600.t260.z1{:src => "/assets/slides/scene2/left.png"}/
+    %img.asset.left-210.sp600.t213.z2{:src => "/assets/slides/scene2/middle.png"}/
+    %img.asset.left60.sp600.t260.z1{:src => "/assets/slides/scene2/right.png"}/
+  %article#tour.slide{:style => "background: url('/assets/backgrounds/color-splash.jpg') repeat-x top center;"}
+    %img.asset.left-472.sp650.t210.z3{:src => "/assets/slides/scene3/ipad.png"}/
+    %img.asset.left-365.sp600.t270.z4{:src => "/assets/slides/scene3/iphone.png"}/
+    %img.asset.left-350.sp450.t135.z2{:src => "/assets/slides/scene3/desktop.png"}/
+    %img.asset.left-185.sp550.t220.z1{:src => "/assets/slides/scene3/macbook.png"}/
+    .info
+      %h2 Fully Responsive theme
+      %a{:href => "#"} TOUR THE PRODUCT
+  %article#responsive.slide{:style => "background: url('/assets/backgrounds/indigo.jpg') repeat-x top center;"}
+    %img.asset.left-472.sp600.t120.z3{:src => "/assets/slides/scene4/html5.png"}/
+    %img.asset.left-190.sp500.t120.z2{:src => "/assets/slides/scene4/css3.png"}/
+    .info
+      %h2
+        Responsive
+        %strong HTML5 & CSS3
+        Theme
+#showcase
+  .container
+    .section_header
+      %h3 Our Services
+    .row.feature_wrapper
+      / Features Row
+      .features_op1_row
+        / Feature
+        .span4.feature.first
+          .img_box
+            %a{:href => "#"}
+              = image_tag 'service1.png' do
+                %span.circle
+                  %span.plus +
+          .text
+            %h6 Responsive theme
+            %p
+              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+        / Feature
+        .span4.feature
+          .img_box
+            %a{:href => "#"}
+              = image_tag 'service2.png' do
+                %span.circle
+                  %span.plus +
+          .text
+            %h6 Easy customization
+            %p
+              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+        / Feature
+        .span4.feature.last
+          .img_box
+            %a{:href => "#"}
+              = image_tag 'service3.png' do
+                %span.circle
+                  %span.plus +
+          .text
+            %h6 Made with love
+            %p
+              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+#features
+  .container
+    .section_header
+      %h3 Features
+    .row.feature
+      .span6
+        = image_tag 'showcase1.png'
+      .span6.info
+        %h3
+          = image_tag 'features-ico1.png'
+          Beautiful on all devices
+        %p
+          There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+    .row.feature.ss
+      .span6.info
+        %h3
+          = image_tag 'features-ico2.png'
+          Blog page included
+        %p
+          There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+      .span6
+        = image_tag 'showcase2.png', class: 'pull-right'
+    .row.feature.ss
+      .span6
+        = image_tag 'showcase3.png'
+      .span6.info
+        %h3
+          = image_tag 'features-ico3.png'
+          Simple and clean coming soon page
+        %p
+          There are many variations of passages of Lorem Ipsum available, but the randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+/ Pricing Option
+#in_pricing
+  .container
+    .section_header
+      %h3 Pricing
+    .row.charts_wrapp
+      / Plan Box
+      .span4
+        .plan
+          .wrapper
+            %h3 Lite
+            .price
+              %span.dollar $
+              %span.qty 35
+              %span.month /month
+            .features
+              %p
+                %strong 10
+                Shared Projects
+              %p
+                %strong 4
+                Team Members
+              %p
+                %strong 10
+                Storage
+            %a.order{:href => "#"} ORDER NOW
+      / Plan Box
+      .span4.pro
+        .plan
+          .wrapper
+            = image_tag 'badge.png', class: 'ribbon'
+            %h3 Pro
+            .price
+              %span.dollar $
+              %span.qty 99
+              %span.month /month
+            .features
+              %p
+                %strong 10
+                Shared Projects
+              %p
+                %strong 25
+                Team Members
+              %p
+                %strong Unlimited
+                Storage
+              %p
+                %strong Plus
+                Phone Support
+              %a.order{:href => "#"} ORDER NOW
+      / Plan Box
+      .span4.standard
+        .plan
+          .wrapper
+            %h3 Standard
+            .price
+              %span.dollar $
+              %span.qty 65
+              %span.month /month
+            .features
+              %p
+                %strong 10
+                Shared Projects
+              %p
+                %strong 4
+                Team Members
+              %p
+                %strong 10
+                Storage
+            %a.order{:href => "#"} ORDER NOW
+    .start
+      %p Start your free, no-risk, 14 day trial!
+      %a{:href => "#"} Start Now!
+#clients
+  .container
+    .section_header
+      %h3 Clients
+    .row
+      .span2.client
+        .img.client1
+      .span2.client
+        .img.client2
+      .span2.client
+        .img.client3
+      .span2.client
+        .img.client1
+      .span2.client
+        .img.client2
+      .span2.client
+        .img.client3

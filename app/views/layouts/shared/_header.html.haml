@@ -1,0 +1,46 @@
+.navbar.transparent.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "/"}
+        %strong COLLEGE DUAL
+      .nav-collapse.collapse
+        %ul.nav.pull-right
+          %li
+            %a.active{:href => "/"} HOME
+          %li
+            %a{:href => "#"} ABOUT US
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              PAGES
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} Features
+              %li
+                %a{:href => "#"} Services
+              %li
+                %a{:href => "#"} Portfolio
+              %li
+                %a{:href => "#"} Portfolio Item
+              %li
+                %a{:href => "#"} Coming Soon
+              %li
+                %a{:href => "#"} Backgrounds
+          %li
+            %a{:href => "#"} PRICING
+          %li
+            %a{:href => "#"} CONTACT US
+          %li
+            %a{:href => "#"} BLOG
+          - unless user_signed_in?
+            %li
+              = link_to "Sign up", new_user_registration_path, class: 'btn-header'
+            %li
+              = link_to "Sign in", new_user_session_path, class: 'btn-header'
+          - else
+            %li
+              = link_to "Sign out", destroy_user_session_path, class: 'btn-header', method: :delete

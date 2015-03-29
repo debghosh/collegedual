@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   mount API => "/api", :at => '/'
 
-  root 'colleges#index'
+  root 'dashboard#index'
   resources :colleges
   resources :questions do
     collection do
       match :show_question, via: [:get, :post]
     end
   end
+
+  resources :dashboard, only: [:index]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
